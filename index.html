@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TKA Bahasa Inggris Kelas XII | Hortatory Exposition & Netiquette CBT</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#f0fdf4',
+            100: '#dcfce7',
+            500: '#16a34a',
+            600: '#15803d',
+            700: '#166534',
+            800: '#14532d',
+            900: '#052e16',
+          },
+          netiquette: {
+            blue: '#2563eb',
+            teal: '#0d9488',
+            amber: '#d97706',
+            darkBg: '#0b1329',
+            darkCard: '#111c38'
+          }
+        },
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          display: ['"Space Grotesk"', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.05);
+}
+.dark ::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 99, 235, 0.7);
+}
+
+.glow-box {
+  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.2);
+}
+.dark .glow-box {
+  box-shadow: 0 0 30px -5px rgba(37, 99, 235, 0.3);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
+</head>
+
+<body class="bg-slate-50 dark:bg-netiquette-darkBg text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 min-h-screen flex flex-col antialiased">
+
+<!-- HEADER BAR -->
+<header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3 cursor-pointer" onclick="showLandingCover()">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-teal-500 to-indigo-600 flex items-center justify-center text-white font-display text-lg shadow-md shadow-blue-500/20">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-800">TKA Bahasa Inggris</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">Kelas XII SMA/MA</span>
+        </div>
+        <h1 class="text-base sm:text-lg font-bold font-display tracking-tight text-slate-900 dark:text-white leading-tight">
+          Hortatory Exposition & Netiquette CBT
+        </h1>
+      </div>
+    </div>
+
+    <!-- Quick Tool Controls -->
+    <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Return to Front Cover -->
+      <button onclick="showLandingCover()" title="View Student Profile & Cover" class="px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-id-card text-blue-500"></i>
+        <span class="hidden md:inline">Cover / Info</span>
+      </button>
+
+      <!-- Mode Toggle (Exam / Practice) -->
+      <button id="modeToggleBtn" title="Toggle Practice Mode (Instant Explanations)" class="px-3 py-1.5 text-xs font-semibold rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center gap-1.5">
+        <i class="fa-solid fa-graduation-cap text-teal-500"></i>
+        <span id="modeLabel" class="hidden md:inline">Mode: Exam</span>
+      </button>
+
+      <!-- Timer Indicator (90 Mins) -->
+      <div class="flex items-center gap-2 bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 px-3 py-1.5 rounded-lg border border-blue-500/30 text-xs font-mono font-bold">
+        <i class="fa-regular fa-clock"></i>
+        <span id="timerDisplay">90:00</span>
+      </div>
+
+      <!-- Dark Mode Switch -->
+      <button id="themeToggleBtn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-amber-500 transition">
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- LANDING COVER & STUDENT PROFILE SECTION -->
+<section id="landingCoverSection" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full transition-all duration-300">
+  
+  <div class="rounded-3xl shadow-2xl overflow-hidden bg-slate-900 text-white border border-blue-500/30">
+    <div class="relative p-6 sm:p-10 md:p-12 bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950">
+      
+      <!-- Ambient Lights -->
+      <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute bottom-0 left-0 -mb-12 -ml-12 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        
+        <!-- Left Banner Details -->
+        <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider">
+            <i class="fa-solid fa-bolt text-amber-400"></i> TES KEMAMPUAN AKADEMIK (TKA) HOTS
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-teal-200 to-indigo-300 leading-tight">
+            BAHASA INGGRIS KELAS XII <br>
+            <span class="text-2xl sm:text-3xl lg:text-4xl font-sans text-white font-bold">Hortatory Exposition: Netiquette</span>
+          </h1>
+
+          <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-xs sm:text-sm text-slate-300 space-y-2">
+            <div class="font-bold text-amber-400 font-display text-base flex items-center justify-center lg:justify-start gap-2">
+              <i class="fa-solid fa-globe"></i> Digital Ethics & Academic Assessment
+            </div>
+            <p class="leading-relaxed">
+              Ujian CBT Interaktif berisi <strong>30 Soal HOTS</strong> (Pilihan Ganda A–E) berbasis teks Hortatory Exposition dengan isu Etika Digital: Cyberbullying, Digital Footprint, Fact-Checking, Intellectual Property, Privacy, & Civil Discourse.
+            </p>
+          </div>
+
+          <!-- Feature Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-slate-300 pt-2">
+            <div class="flex items-center gap-2 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/50">
+              <i class="fa-solid fa-stopwatch text-blue-400 text-base"></i>
+              <span>90 Minutes Duration</span>
+            </div>
+            <div class="flex items-center gap-2 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/50">
+              <i class="fa-solid fa-brain text-amber-400 text-base"></i>
+              <span>30 HOTS Items</span>
+            </div>
+            <div class="flex items-center gap-2 bg-slate-800/40 p-2.5 rounded-xl border border-slate-700/50 col-span-2 sm:col-span-1">
+              <i class="fa-solid fa-chart-line text-teal-400 text-base"></i>
+              <span>Instant Score & Key</span>
+            </div>
+          </div>
+
+          <!-- Author Branding Card -->
+          <div class="flex items-center justify-center lg:justify-start gap-3 pt-2">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-teal-500 flex items-center justify-center text-white font-bold shadow-lg">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <div class="text-left text-xs">
+              <div class="text-blue-400 font-mono font-semibold text-[10px] uppercase">Pengembang / Author</div>
+              <div class="text-sm font-bold text-white">Asep Subagja, S.Pd</div>
+              <div class="text-slate-400">SMAN 1 Ciracap Sukabumi • 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Student Form -->
+        <div class="lg:col-span-5 bg-slate-900/90 backdrop-blur-xl p-6 sm:p-8 rounded-2xl border border-blue-500/30 shadow-2xl space-y-5">
+          <div class="border-b border-slate-800 pb-3">
+            <h3 class="text-lg font-bold font-display text-white flex items-center gap-2">
+              <i class="fa-solid fa-id-card text-blue-400"></i> Identitas Peserta Ujian
+            </h3>
+            <p class="text-xs text-slate-400">Masukkan data diri Anda untuk memulai ujian CBT.</p>
+          </div>
+
+          <form id="studentDataForm" onsubmit="handleStartExam(event)" class="space-y-4 text-left">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Nama Lengkap Siswa</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-500"><i class="fa-solid fa-user"></i></span>
+                <input type="text" id="studentNameInput" required placeholder="Contoh: Muhammad Farhan" class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Kelas / Rombel</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-500"><i class="fa-solid fa-graduation-cap"></i></span>
+                  <input type="text" id="studentClassInput" required placeholder="XII BAHASA / MIPA" class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition">
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">NISN / No. Ujian</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-500"><i class="fa-solid fa-hashtag"></i></span>
+                  <input type="text" id="studentNisnInput" placeholder="007123456" class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition">
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-1">Asal Sekolah</label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-500"><i class="fa-solid fa-school"></i></span>
+                <input type="text" id="studentSchoolInput" required value="SMAN 1 Ciracap Sukabumi" class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 transition">
+              </div>
+            </div>
+
+            <div class="pt-2 space-y-2">
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 via-teal-500 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-black text-sm uppercase tracking-wider transition shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-play-circle text-lg"></i> Mulai Ujian TKA Sekarang
+              </button>
+              
+              <button type="button" onclick="startPracticeDirectly()" class="w-full py-2.5 px-4 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition flex items-center justify-center gap-2">
+                <i class="fa-solid fa-graduation-cap text-teal-400"></i> Mode Latihan Interaktif (Lengkap Kunci & Pembahasan)
+              </button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- TOPIC NAV BAR -->
+<div id="topicNavBar" class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-3 px-4 sm:px-6 lg:px-8 shadow-sm hidden">
+  <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+    <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar w-full" id="topicPillsContainer">
+      <!-- Generated by JS -->
+    </div>
+  </div>
+</div>
+
+<!-- MAIN WORKSPACE -->
+<main id="examWorkspace" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+    
+    <!-- LEFT PANEL: Reading Passage (6 Cols) -->
+    <section class="lg:col-span-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm sticky top-20 max-h-[80vh] flex flex-col">
+      <!-- Story Header -->
+      <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800 flex-wrap">
+        <div class="flex items-center gap-2">
+          <span id="storyTag" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+            Text 1 of 6
+          </span>
+          <span id="storyThemeBadge" class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20">
+            Cyberbullying Ethics
+          </span>
+        </div>
+        <div class="text-xs text-slate-400 font-mono">
+          Questions <span id="storyQRange" class="font-bold text-slate-700 dark:text-slate-200">1 - 5</span>
+        </div>
+      </div>
+
+      <!-- Text Title & Content -->
+      <div id="storyTitle" class="text-xl font-bold font-display text-blue-700 dark:text-blue-300 mt-4 mb-3">
+        Text 1 — Digital Empathy: Cultivating Respect in Online Spaces
+      </div>
+
+      <div id="storyBody" class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed space-y-3 overflow-y-auto pr-2 flex-1 font-sans text-justify">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Footer Story Tools -->
+      <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+        <span><i class="fa-solid fa-book-open mr-1 text-blue-500"></i> Read carefully before answering</span>
+        <button id="scrollToTopStory" class="hover:text-blue-500 transition">Top <i class="fa-solid fa-arrow-up ml-1"></i></button>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: Question Panel & Palette (6 Cols) -->
+    <section class="lg:col-span-6 space-y-6">
+      
+      <!-- QUESTION CARD -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-md relative glow-box">
+        
+        <!-- Card Header -->
+        <div class="flex items-center justify-between gap-2 pb-4 border-b border-slate-100 dark:border-slate-800">
+          <div class="flex items-center gap-2">
+            <span id="qNumberBadge" class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold font-mono text-sm flex items-center justify-center shadow">
+              Q1
+            </span>
+            <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+              TKA HOTS Question
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button id="flagBtn" class="px-2.5 py-1 text-xs rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-amber-500 transition flex items-center gap-1">
+              <i class="fa-solid fa-bookmark"></i>
+              <span id="flagText" class="hidden sm:inline">Flag</span>
+            </button>
+            
+            <span id="skillBadge" class="text-[11px] font-medium px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+              Main Stance / Thesis
+            </span>
+          </div>
+        </div>
+
+        <!-- Question Prompt -->
+        <div id="qPrompt" class="text-base sm:text-lg font-semibold text-slate-800 dark:text-slate-100 my-4 leading-snug">
+          What is the primary thesis advocated by the author in the text?
+        </div>
+
+        <!-- Options Container -->
+        <div id="qOptions" class="space-y-3 my-4">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Instant Feedback Box (Practice Mode) -->
+        <div id="feedbackBox" class="hidden my-4 p-4 rounded-xl text-xs sm:text-sm leading-relaxed border">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-between gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+          <button id="prevQBtn" class="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-xs sm:text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition flex items-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+            <i class="fa-solid fa-chevron-left"></i> Previous
+          </button>
+
+          <button id="nextQBtn" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm transition flex items-center gap-2 shadow-lg shadow-blue-600/20">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- QUESTION PALETTE GRID -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 shadow-sm space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-sm font-bold text-slate-800 dark:text-slate-200 flex items-center gap-2">
+            <i class="fa-solid fa-grip text-blue-500"></i> Question Palette (1 - 30)
+          </h3>
+          <span id="answeredCount" class="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
+            0 / 30 Answered
+          </span>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-slate-100 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+          <div id="progressBar" class="bg-gradient-to-r from-blue-500 to-teal-500 h-full w-0 transition-all duration-300"></div>
+        </div>
+
+        <!-- Grid Matrix -->
+        <div id="paletteGrid" class="grid grid-cols-6 sm:grid-cols-10 gap-2 pt-2">
+          <!-- 30 Buttons generated by JS -->
+        </div>
+
+        <!-- Legend -->
+        <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-slate-800">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-blue-600 inline-block"></span> Current</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-emerald-500 inline-block"></span> Answered</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-amber-500 inline-block"></span> Flagged</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-slate-200 dark:bg-slate-800 border inline-block"></span> Unanswered</span>
+        </div>
+
+        <!-- Submit Test Button -->
+        <div class="pt-3">
+          <button id="finishTestBtn" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-orange-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-extrabold text-sm uppercase tracking-wider transition shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Finish & Check Test Results
+          </button>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<!-- RESULTS MODAL -->
+<div id="resultModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl space-y-6">
+    
+    <!-- Modal Header -->
+    <div class="flex items-start justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+      <div>
+        <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+          Official TKA Result Report
+        </span>
+        <h2 class="text-2xl font-black font-display text-slate-900 dark:text-white mt-2">
+          Academic Performance Summary
+        </h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          Siswa: <strong id="resStudentName" class="text-slate-800 dark:text-slate-200">-</strong> | 
+          Kelas: <span id="resStudentClass">-</span> | 
+          Sekolah: <span id="resStudentSchool">-</span>
+        </p>
+      </div>
+      <button id="closeModalBtn" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xl font-bold p-2">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Score Metrics -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/30 p-5 rounded-2xl text-center">
+        <div class="text-xs text-blue-600 dark:text-blue-400 font-semibold uppercase tracking-wider">Final Score</div>
+        <div id="finalScoreVal" class="text-4xl sm:text-5xl font-extrabold font-display text-blue-600 dark:text-blue-300 my-1">
+          0 / 30
+        </div>
+        <div id="finalPercentage" class="text-sm font-bold text-slate-600 dark:text-slate-300">0% Accuracy</div>
+      </div>
+
+      <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/30 p-5 rounded-2xl text-center">
+        <div class="text-xs text-amber-600 dark:text-amber-400 font-semibold uppercase tracking-wider">HOTS Proficiency</div>
+        <div id="gradeBadge" class="text-2xl font-black text-amber-600 dark:text-amber-300 my-2">
+          Grade: -
+        </div>
+        <div id="gradeDesc" class="text-xs text-slate-500 dark:text-slate-400">Complete review below</div>
+      </div>
+
+      <div class="bg-gradient-to-br from-teal-500/10 to-emerald-500/10 border border-teal-500/30 p-5 rounded-2xl text-center">
+        <div class="text-xs text-teal-600 dark:text-teal-400 font-semibold uppercase tracking-wider">Time Duration</div>
+        <div id="timeTakenVal" class="text-xl font-bold text-slate-800 dark:text-slate-200 my-2">
+          00:00 Time
+        </div>
+        <div id="answeredRatio" class="text-xs text-slate-500 dark:text-slate-400">30 of 30 Attempted</div>
+      </div>
+    </div>
+
+    <!-- Detailed Answer Review Section -->
+    <div class="space-y-4">
+      <h3 class="text-base font-bold text-slate-800 dark:text-slate-200 border-b border-slate-100 dark:border-slate-800 pb-2 flex items-center justify-between">
+        <span><i class="fa-solid fa-magnifying-glass text-blue-500 mr-2"></i> Item Review & Pedagogical Rationale</span>
+        <span class="text-xs font-normal text-slate-500">30 Items</span>
+      </h3>
+      <div id="reviewContainer" class="space-y-4 max-h-[380px] overflow-y-auto pr-2">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+
+    <!-- Modal Actions -->
+    <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+      <div class="text-xs text-slate-500">
+        Developer / Author: <strong>Asep Subagja, S.Pd</strong> (SMAN 1 Ciracap Sukabumi)
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="printResultBtn" class="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold transition flex items-center gap-1.5">
+          <i class="fa-solid fa-print"></i> Print / Save PDF
+        </button>
+        <button id="restartTestBtn" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition flex items-center gap-1.5">
+          <i class="fa-solid fa-rotate-right"></i> Retake Test
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CONFIRMATION MODAL -->
+<div id="customDialogModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 text-center">
+    <div id="dialogIconContainer" class="w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl bg-amber-500/10 text-amber-500">
+      <i class="fa-solid fa-circle-question"></i>
+    </div>
+    <h3 id="dialogTitle" class="text-lg font-bold font-display text-slate-900 dark:text-white">Confirmation</h3>
+    <p id="dialogMessage" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Are you sure?</p>
+    <div id="dialogActions" class="flex items-center justify-center gap-3 pt-2">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-auto bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 text-center">
+  <div class="max-w-7xl mx-auto px-4 space-y-2">
+    <p class="font-display text-blue-400 font-semibold">TKA Bahasa Inggris Kelas XII SMA/MA • Hortatory Exposition Text: Netiquette</p>
+    <p>Pengembang / Author: Asep Subagja, S.Pd — SMAN 1 Ciracap, Kab. Sukabumi (2026)</p>
+  </div>
+</footer>
+
+<script>
+const dataset = [
+  {
+    topicId: 1,
+    topicName: "Cyberbullying",
+    storyTitle: "Text 1 — Digital Empathy: Respect in Online Spaces",
+    storyParagraphs: [
+      "In the modern digital era, social media platforms have transformed into the primary stage for student communication. While this connectivity fosters rapid information exchange, it has simultaneously spawned a troubling surge in online harassment and cyberbullying. Many adolescents fall into the trap of assuming that typing behind a screen absolves them of ethical responsibility.",
+      "First and foremost, online comments carry real psychological consequences. Studies consistently show that victims of cyberbullying experience severe anxiety, diminished academic performance, and emotional distress. The illusion of anonymity often emboldens individuals to say things online that they would never utter face-to-face. This dehumanization of digital discourse threatens the mental well-being of young scholars.",
+      "Furthermore, passive observation of online abuse fosters a toxic bystander culture. When students witness hurtful remarks or defamatory memes and remain silent—or worse, share them—they actively amplify the harm. True digital citizenship demands active intervention rather than passive complicity.",
+      "Therefore, school administrators and educators must enforce comprehensive netiquette literacy programs. Students ought to practice digital empathy by asking themselves whether a comment is respectful before clicking send. Digital spaces should be treated with the same moral accountability as physical classrooms."
+    ],
+    questions: [
+      {
+        qNum: 1,
+        skill: "Main Stance / Thesis Analysis",
+        prompt: "What is the author's primary thesis in the text?",
+        options: [
+          "Social media platforms should be completely banned in secondary schools.",
+          "Digital communication requires the same moral accountability and empathy as physical interactions.",
+          "Cyberbullying is an inevitable consequence of modern technological advancement.",
+          "Passive bystanders are more guilty of harassment than the original perpetrators.",
+          "Anonymity on the internet is fundamentally harmful and should be outlawed."
+        ],
+        correct: "B",
+        explanation: "The author explicitly asserts that typing behind a screen does not absolve moral responsibility and recommendations urge treating digital spaces with the same moral accountability as physical classrooms."
+      },
+      {
+        qNum: 2,
+        skill: "Argument Strength Evaluation",
+        prompt: "Why does the author argue that online anonymity is dangerous for adolescent communication?",
+        options: [
+          "It lowers psychological inhibitions and leads to the dehumanization of digital discourse.",
+          "It prevents students from accessing academic research materials safely.",
+          "It forces school administrators to monitor personal smartphone usage 24/7.",
+          "It makes social media algorithms display irrelevant content to teenagers.",
+          "It completely eliminates the possibility of constructive online learning."
+        ],
+        correct: "A",
+        explanation: "Paragraph 2 directly connects anonymity to lower inhibitions where individuals say things online they would never utter face-to-face, emboldening harmful behavior."
+      },
+      {
+        qNum: 3,
+        skill: "Implicit Meaning / Inference",
+        prompt: "What can be inferred about 'passive bystanders' in online harassment based on paragraph 3?",
+        options: [
+          "They are completely innocent because they did not write the abusive content.",
+          "Their inaction and sharing behavior inadvertently fuel the cycle of online toxic culture.",
+          "They are immune to the psychological distress caused by social media platforms.",
+          "They usually report cyberbullying cases to school authorities immediately.",
+          "They prefer face-to-face conflicts over digital communication."
+        ],
+        correct: "B",
+        explanation: "The text highlights that remaining silent or sharing defamatory memes actively amplifies harm, proving passive bystanders contribute to toxic culture."
+      },
+      {
+        qNum: 4,
+        skill: "Language Feature Analysis",
+        prompt: "The word 'complicity' in paragraph 3 is closest in meaning to ...",
+        options: ["involvement in wrongdoing", "technical difficulty", "academic excellence", "complete isolation", "honest communication"],
+        correct: "A",
+        explanation: "'Complicity' refers to being involved with or partnering in harmful actions/wrongdoing."
+      },
+      {
+        qNum: 5,
+        skill: "Recommendation Evaluation",
+        prompt: "Which action best reflects the author's recommendation in paragraph 4?",
+        options: [
+          "Deleting all personal social media accounts immediately.",
+          "Pausing to reflect on the empathy and respect of a message before sending it.",
+          "Reporting every single neutral online disagreement to law enforcement.",
+          "Allowing artificial intelligence to write all personal comments.",
+          "Ignoring online harassment until school administrators intervene."
+        ],
+        correct: "B",
+        explanation: "The author explicitly recommends that students practice digital empathy by asking whether a comment is respectful before clicking 'send'."
+      }
+    ]
+  },
+  {
+    topicId: 2,
+    topicName: "Digital Footprint",
+    storyTitle: "Text 2 — Protecting Your Digital Footprint",
+    storyParagraphs: [
+      "In today's interconnected world, every online interaction leaves a permanent digital footprint. From casual social media comments and uploaded photographs to forum posts, teenagers leave behind data trails that can be searched, archived, and analyzed. Regrettably, many Grade XII students fail to realize that their online presence today will directly impact their future academic and professional prospects.",
+      "First, admissions officers and corporate recruiters increasingly perform digital background checks. A single controversial post, discriminatory comment, or inappropriate photo published years earlier can jeopardize university admission or job placement. What seems like an innocent joke among peers can be interpreted very differently by an employer.",
+      "Second, digital footprints are extremely difficult to erase. Even when a user deletes a post, screenshots and cached pages can preserve the content indefinitely. Assuming that privacy settings guarantee total secrecy is a dangerous delusion.",
+      "Therefore, high school seniors should conduct a thorough audit of their personal social media profiles. Students must cultivate a habit of digital discretion—asking themselves if they would be comfortable presenting their posts to a future hiring committee."
+    ],
+    questions: [
+      {
+        qNum: 6,
+        skill: "Main Stance / Thesis Analysis",
+        prompt: "What issue does the text strongly advocate regarding high school seniors?",
+        options: [
+          "Students ought to abandon social media in favor of printed portfolios.",
+          "Students should actively curate and protect their digital footprint to safeguard their future.",
+          "Universities should be prohibited from screening applicants' social media accounts.",
+          "Employers ought to ignore personal online posts during job interviews.",
+          "Deleting social media applications guarantees complete privacy online."
+        ],
+        correct: "B",
+        explanation: "The text emphasizes that high school seniors must curate their digital footprint to prevent negative impacts on future university and career opportunities."
+      },
+      {
+        qNum: 7,
+        skill: "Cause & Effect Analysis",
+        prompt: "According to paragraph 2, what is a direct consequence of reckless online posting?",
+        options: [
+          "Immediate hardware damage to smartphones.",
+          "Loss of university admission or prospective employment opportunities.",
+          "Automatic permanent suspension of internet connectivity.",
+          "Inability to graduate from Grade XII academic programs.",
+          "Reduction of internet search engine speed."
+        ],
+        correct: "B",
+        explanation: "Paragraph 2 states that inappropriate posts or comments can jeopardize university admissions or job placements during background checks."
+      },
+      {
+        qNum: 8,
+        skill: "Deep Inference",
+        prompt: "What does the author imply by calling privacy settings a 'dangerous delusion'?",
+        options: [
+          "Privacy settings are illegal under international cybersecurity laws.",
+          "Privacy settings provide a false sense of security while content can still be saved or cached.",
+          "Social media companies charge exorbitant fees for privacy settings.",
+          "Privacy settings automatically make user profiles visible to recruiters.",
+          "Teenagers refuse to activate privacy features on smartphones."
+        ],
+        correct: "B",
+        explanation: "The text states cached pages and screenshots preserve content indefinitely, meaning reliance on privacy settings gives a misleading sense of complete secrecy."
+      },
+      {
+        qNum: 9,
+        skill: "Contextual Vocabulary",
+        prompt: "The word 'jeopardize' in paragraph 2 is synonymous with ...",
+        options: ["endanger", "enhance", "guarantee", "organize", "accelerate"],
+        correct: "A",
+        explanation: "'Jeopardize' means to put something at risk or endanger it."
+      },
+      {
+        qNum: 10,
+        skill: "Recommendation Application",
+        prompt: "Which recommendation is proposed by the author to address digital footprints?",
+        options: [
+          "Hiring professional lawyers to clean up social media databases.",
+          "Conducting personal profile audits and practicing digital discretion before posting.",
+          "Using fake names for all future internet transactions.",
+          "Demanding that social media platforms shut down cached archives.",
+          "Filing complaints against corporate human resources recruiters."
+        ],
+        correct: "B",
+        explanation: "The author explicitly suggests conducting a profile audit and cultivating digital discretion by evaluating posts against professional standards."
+      }
+    ]
+  },
+  {
+    topicId: 3,
+    topicName: "Fact-Checking",
+    storyTitle: "Text 3 — Fact-Checking: Stopping the Spread of Misinformation",
+    storyParagraphs: [
+      "The viral nature of social media algorithms prioritizes emotional engagement over factual accuracy. As a result, sensationalized news, fake headlines, and unverified rumors spread six times faster than truthful stories. Sharing unverified information is not merely a harmless error; it is a fundamental breach of digital netiquette that damages public trust.",
+      "In the first place, misinformation produces tangible real-world harm. During public health emergencies or political elections, false reports trigger unnecessary panic, incite social division, and undermine democratic debate. When users share posts without fact-checking, they become active agents of deception.",
+      "Furthermore, digital filter bubbles exacerbate this crisis. Algorithms present users with content that reinforces their pre-existing biases, making them susceptible to confirmation bias. Breaking this cycle requires intellectual humility and rigorous verification habits.",
+      "Consequently, internet users should adopt a strict 'verify before sharing' protocol. Before hitting the share button, individuals must check multiple reputable sources, evaluate the author's credibility, and distinguish opinion pieces from empirical evidence."
+    ],
+    questions: [
+      {
+        qNum: 11,
+        skill: "Main Stance / Thesis",
+        prompt: "What is the author's core position regarding online information sharing?",
+        options: [
+          "Social media algorithms should replace human news editors entirely.",
+          "Sharing unverified content is an ethical failure that damages society and must be actively corrected.",
+          "Emotional headlines are necessary to keep young audiences engaged in global news.",
+          "Fact-checking websites are inherently biased and should not be trusted.",
+          "Public panic during emergencies is caused exclusively by professional journalists."
+        ],
+        correct: "B",
+        explanation: "The text asserts that sharing unverified information is a breach of netiquette that causes real-world harm and damages public trust."
+      },
+      {
+        qNum: 12,
+        skill: "Argument Evaluation",
+        prompt: "How do social media algorithms contribute to the spread of false information?",
+        options: [
+          "They delete verified news reports automatically every 24 hours.",
+          "They prioritize provocative, emotionally charged content over accuracy to maximize engagement.",
+          "They restrict internet access for users who post educational articles.",
+          "They charge subscription fees for reading fact-checked information.",
+          "They force users to share news articles with at least ten contacts."
+        ],
+        correct: "B",
+        explanation: "Paragraph 1 explains that algorithms prioritize emotional engagement over factual accuracy, making sensational false news spread rapidly."
+      },
+      {
+        qNum: 13,
+        skill: "Inference / Interpretation",
+        prompt: "Based on paragraph 3, what is 'confirmation bias'?",
+        options: [
+          "The tendency to search for and accept information that aligns with pre-existing beliefs.",
+          "The ability to remember complex scientific formulas effortlessly.",
+          "The process of verifying source credentials through government database software.",
+          "A technological glitch in social media search engines.",
+          "The refusal to use electronic devices during study hours."
+        ],
+        correct: "A",
+        explanation: "The text links filter bubbles and pre-existing biases to confirmation bias, where users favor content that confirms their existing viewpoints."
+      },
+      {
+        qNum: 14,
+        skill: "Reference Word Analysis",
+        prompt: "The word 'exacerbate' in paragraph 3 is closest in meaning to ...",
+        options: ["worsen", "alleviate", "simplify", "investigate", "terminate"],
+        correct: "A",
+        explanation: "'Exacerbate' means to make a problem, bad situation, or negative feeling worse."
+      },
+      {
+        qNum: 15,
+        skill: "Recommendation Synthesis",
+        prompt: "Which step is part of the author's recommended 'verify before sharing' protocol?",
+        options: [
+          "Re-posting content immediately if it aligns with your personal political opinion.",
+          "Cross-checking information across multiple reputable sources before sharing.",
+          "Relying solely on comment section opinions to verify factual claims.",
+          "Assuming all viral videos are legitimate unless proven otherwise.",
+          "Disabling smartphone notifications permanently."
+        ],
+        correct: "B",
+        explanation: "Paragraph 4 explicitly recommends checking multiple reputable sources and evaluating credibility prior to pressing 'share'."
+      }
+    ]
+  },
+  {
+    topicId: 4,
+    topicName: "Intellectual Property",
+    storyTitle: "Text 4 — Respecting Intellectual Property in the Digital Era",
+    storyParagraphs: [
+      "The widespread availability of artificial intelligence tools and online digital repositories has made copying images, essays, and artistic works easier than ever. However, easy technical access does not grant ethical ownership. Copying another creator's intellectual labor without permission or proper attribution is digital plagiarism, and it undermines the global creative ecosystem.",
+      "First, intellectual property theft devalues the effort of original creators. Writers, artists, and researchers invest immense time, skill, and capital into their original works. When digital users plagiarize or distribute copyrighted material without authorization, they rob creators of both recognition and financial livelihood.",
+      "Second, academic integrity is corrupted when students rely on unauthorized AI-generated text or uncredited web copying. Academic growth depends on developing original analytical thinking, not merely compiling stolen insights.",
+      "Therefore, students and content creators must adhere strictly to fair use guidelines and proper citation ethics. We ought to give credit where credit is due by employing appropriate referencing standards and respecting copyright licenses."
+    ],
+    questions: [
+      {
+        qNum: 16,
+        skill: "Main Stance Analysis",
+        prompt: "What central stance does the author take regarding digital content creation?",
+        options: [
+          "Artificial intelligence tools should be made illegal for secondary school students.",
+          "Technical ease of access does not justify digital plagiarism; attribution must be maintained.",
+          "Copyright laws are outdated obstacles that hinder digital artistic expression.",
+          "All internet content should automatically belong to the public domain.",
+          "Academic growth is best measured by how quickly students can aggregate online articles."
+        ],
+        correct: "B",
+        explanation: "The author explicitly asserts that easy technical access does not grant ethical ownership, advocating for attribution and respect for intellectual property."
+      },
+      {
+        qNum: 17,
+        skill: "Argument Strength Evaluation",
+        prompt: "Why does digital plagiarism harm original creators according to paragraph 2?",
+        options: [
+          "It forces creators to move to rural areas without internet connectivity.",
+          "It deprives creators of proper recognition and rightful financial compensation.",
+          "It causes social media platforms to delete original artwork files.",
+          "It limits the storage capacity of cloud databases.",
+          "It prevents creators from using search engines."
+        ],
+        correct: "B",
+        explanation: "Paragraph 2 states that unauthorized copying robs creators of both recognition and financial livelihood."
+      },
+      {
+        qNum: 18,
+        skill: "Inference",
+        prompt: "What impact does uncredited web copying have on academic growth?",
+        options: [
+          "It accelerates critical thinking skills among senior high school students.",
+          "It undermines true learning by substituting original analytical effort with stolen work.",
+          "It guarantees top grades in academic literature research assignments.",
+          "It encourages students to become professional soft-matter scientists.",
+          "It eliminates the need for university entrance exams."
+        ],
+        correct: "B",
+        explanation: "Paragraph 3 explains that academic growth relies on original analytical thinking, which is corrupted by reliance on uncredited copying."
+      },
+      {
+        qNum: 19,
+        skill: "Tone & Mood Analysis",
+        prompt: "The author's tone throughout Text 4 can best be described as ...",
+        options: ["sarcastic and dismissive", "assertive and ethically principled", "indifferent and passive", "humorous and playful", "overly pessimistic"],
+        correct: "B",
+        explanation: "The author uses clear, assertive, and principle-based argument language (*must adhere strictly, ethically principled*) to advocate digital ethics."
+      },
+      {
+        qNum: 20,
+        skill: "Recommendation Evaluation",
+        prompt: "What is the recommended action for students utilizing online research materials?",
+        options: [
+          "Paraphrasing text without mentioning the original author.",
+          "Employing proper citation ethics and referencing original sources accurately.",
+          "Avoiding online research entirely in favor of oral interviews.",
+          "Claiming AI-generated text as personal original thought.",
+          "Uploading copyrighted textbooks to open-access public forums."
+        ],
+        correct: "B",
+        explanation: "Paragraph 4 highlights that students must adhere strictly to fair use guidelines by employing proper referencing standards."
+      }
+    ]
+  },
+  {
+    topicId: 5,
+    topicName: "Data Privacy",
+    storyTitle: "Text 5 — Online Privacy and Data Discretion",
+    storyParagraphs: [
+      "In an age where social media platforms incentivize constant updates, oversharing personal information has become a widespread vulnerability. Users frequently broadcast their live location, post personal ID photos, or tag peers without consent. Respecting personal and communal privacy is a cornerstone of responsible netiquette.",
+      "First, oversharing personal data exposes individuals to severe cyber security threats, including identity theft, location tracking, and unauthorized data harvesting. Cybercriminals regularly collect public metadata to orchestrate phishing attacks.",
+      "Second, publishing photos or videos containing other people without their permission violates their personal autonomy. Just because an event occurs in public does not give anyone the right to broadcast another individual's likeness across the web.",
+      "Thus, internet users must audit their account privacy settings regularly and practice strict consent protocols. Always request permission before tagging or sharing media featuring others, and keep sensitive personal data offline."
+    ],
+    questions: [
+      {
+        qNum: 21,
+        skill: "Thesis Identification",
+        prompt: "What is the main thesis of Text 5?",
+        options: [
+          "Social media companies should delete all public location tagging services.",
+          "Practicing privacy discretion and respecting data consent are essential netiquette obligations.",
+          "Taking photographs in public spaces should be declared illegal.",
+          "Phishing attacks are caused exclusively by outdated smartphone software.",
+          "Sharing personal life updates continuously is necessary for building social connections."
+        ],
+        correct: "B",
+        explanation: "The passage asserts that oversharing creates vulnerability and that respecting personal and communal privacy is a cornerstone of responsible netiquette."
+      },
+      {
+        qNum: 22,
+        skill: "Cause & Effect Analysis",
+        prompt: "What cyber risk is directly associated with broadcasting live locations and personal IDs?",
+        options: [
+          "Phishing attacks, identity theft, and unauthorized location tracking.",
+          "Immediate loss of cellular phone subscription services.",
+          "Slowing down of home Wi-Fi routers.",
+          "Automatic deletion of cloud storage folders.",
+          "Increased battery consumption on modern smartphones."
+        ],
+        correct: "A",
+        explanation: "Paragraph 2 explicitly connects oversharing personal data to identity theft, location tracking, and phishing attacks by cybercriminals."
+      },
+      {
+        qNum: 23,
+        skill: "Inference / Privacy Ethics",
+        prompt: "What principle underlies the requirement to ask permission before tagging someone online?",
+        options: [
+          "Financial profit sharing among social media influencers.",
+          "Respect for personal autonomy and privacy rights of others.",
+          "Reducing network bandwidth usage on mobile servers.",
+          "Preventing smartphone camera lenses from wearing out.",
+          "Complying with international advertising regulations."
+        ],
+        correct: "B",
+        explanation: "Paragraph 3 emphasizes that publishing others' likeness without permission violates personal autonomy, establishing consent as a sign of respect."
+      },
+      {
+        qNum: 24,
+        skill: "Vocabulary in Context",
+        prompt: "The word 'autonomy' in paragraph 3 refers to an individual's right to ...",
+        options: ["self-determination and control over personal choices", "receive free internet connections", "purchase electronic devices without tax", "criticize government regulations anonymously", "access restricted corporate databases"],
+        correct: "A",
+        explanation: "'Autonomy' means independence, freedom, and the right to self-determination regarding one's personal life and likeness."
+      },
+      {
+        qNum: 25,
+        skill: "Recommendation Synthesis",
+        prompt: "According to the final paragraph, what dual actions should users take to preserve privacy?",
+        options: [
+          "Selling personal data to reputable marketing firms and changing phone numbers.",
+          "Auditing account privacy settings regularly and asking for consent before sharing media of others.",
+          "Disabling camera features on smartphones and using text-only networks.",
+          "Changing passwords every hour and deleting search histories daily.",
+          "Filing law enforcement reports whenever a friend tags a photo."
+        ],
+        correct: "B",
+        explanation: "Paragraph 4 mandates auditing privacy settings regularly and enforcing consent protocols before tagging or publishing media of others."
+      }
+    ]
+  },
+  {
+    topicId: 6,
+    topicName: "Civil Discourse",
+    storyTitle: "Text 6 — Promoting Civil Discourse in Comment Sections",
+    storyParagraphs: [
+      "Comment sections on digital news outlets and video platforms were originally envisioned as virtual town halls for healthy intellectual exchange. Regrettably, many have devolved into toxic arenas filled with personal insults, provocative 'rage bait', and malicious trolling. Elevating online discourse back to civil standards is imperative for a healthy online culture.",
+      "To begin with, toxic comment culture suppresses genuine dialogue and intellectual diversity. When aggressive commentary dominates a platform, constructive contributors withdraw, leaving the space controlled by extreme and hostile voices. This polarization damages democratic debate.",
+      "In addition, psychological research indicates that engaging in or reading aggressive online arguments increases real-world stress and hostility levels. Cyber toxicity creates a cycle of negativity that spills over into real-life social interactions.",
+      "Therefore, users should strictly adhere to the 'THINK' framework before commenting: Is it True, Helpful, Inspiring, Necessary, and Kind? Digital platforms and users alike must foster constructive criticism while firmly rejecting abusive flame wars."
+    ],
+    questions: [
+      {
+        qNum: 26,
+        skill: "Main Idea / Thesis",
+        prompt: "What is the primary argument presented in Text 6?",
+        options: [
+          "Comment sections on news websites should be shut down permanently.",
+          "Online comment sections must return to civil standards by replacing toxicity with constructive discourse.",
+          "Malicious trolling is a natural and healthy component of political debate.",
+          "Virtual town halls are less efficient than printed letters to newspaper editors.",
+          "Reading aggressive comments builds mental resilience in teenagers."
+        ],
+        correct: "B",
+        explanation: "The author advocates that elevating online discourse back to civil standards is imperative to combat online toxicity and foster constructive exchanges."
+      },
+      {
+        qNum: 27,
+        skill: "Cause & Effect Analysis",
+        prompt: "What is the broader societal consequence of aggressive online comment sections?",
+        options: [
+          "It forces digital news outlets to lower their subscription prices.",
+          "It suppresses constructive contributors and leads to extreme ideological polarization.",
+          "It causes social media companies to go bankrupt.",
+          "It improves overall digital literacy rates among senior citizens.",
+          "It encourages more people to write printed academic essays."
+        ],
+        correct: "B",
+        explanation: "Paragraph 2 states that aggressive culture suppresses constructive voices, leaving spaces controlled by extreme voices and causing polarization."
+      },
+      {
+        qNum: 28,
+        skill: "Concept Application (THINK Rule)",
+        prompt: "In the context of the recommendation, what does the 'K' in the THINK framework stand for?",
+        options: ["Knowledgeable", "Kind", "Keen", "Key", "Known"],
+        correct: "B",
+        explanation: "Paragraph 4 explicitly outlines THINK as: True, Helpful, Inspiring, Necessary, and Kind."
+      },
+      {
+        qNum: 29,
+        skill: "Contextual Vocabulary / Idioms",
+        prompt: "The phrase 'flame war' in paragraph 4 refers to ...",
+        options: [
+          "a technical virus that overheats smartphone microprocessors.",
+          "an intense, hostile, and abusive exchange of online insults between users.",
+          "a competitive speed-typing tournament among software developers.",
+          "a system update designed to delete spam emails.",
+          "a fire emergency alert transmitted through cellular towers."
+        ],
+        correct: "B",
+        explanation: "In netiquette terminology, a 'flame war' is an angry, hostile series of abusive comments exchanged between internet users."
+      },
+      {
+        qNum: 30,
+        skill: "Recommendation Synthesis",
+        prompt: "How can online users best contribute to civil discourse according to the author?",
+        options: [
+          "By responding to aggressive insults with even harsher language.",
+          "By applying the THINK framework and engaging in constructive criticism while avoiding toxic hostility.",
+          "By ignoring all news articles completely.",
+          "By creating automated software bots to defend personal opinions.",
+          "By reporting any contrasting viewpoint as malicious harassment."
+        ],
+        correct: "B",
+        explanation: "The author explicitly suggests adhering to the THINK framework and fostering constructive criticism while rejecting flame wars."
+      }
+    ]
+  }
+];
+
+let currentQIndex = 0;
+let userAnswers = new Array(30).fill(null);
+let flaggedQuestions = new Set();
+let isPracticeMode = false;
+let isDarkMode = false;
+let timerSeconds = 5400; // 90 Minutes
+let timerInterval = null;
+
+let studentProfile = {
+  name: "Muhammad Farhan",
+  className: "XII BAHASA 1",
+  nisn: "007123456",
+  school: "SMAN 1 Ciracap Sukabumi"
+};
+
+// DOM Elements
+const landingCoverSection = document.getElementById("landingCoverSection");
+const examWorkspace = document.getElementById("examWorkspace");
+const topicNavBar = document.getElementById("topicNavBar");
+
+const storyTag = document.getElementById("storyTag");
+const storyThemeBadge = document.getElementById("storyThemeBadge");
+const storyQRange = document.getElementById("storyQRange");
+const storyTitle = document.getElementById("storyTitle");
+const storyBody = document.getElementById("storyBody");
+
+const qNumberBadge = document.getElementById("qNumberBadge");
+const skillBadge = document.getElementById("skillBadge");
+const qPrompt = document.getElementById("qPrompt");
+const qOptions = document.getElementById("qOptions");
+const feedbackBox = document.getElementById("feedbackBox");
+
+const flagBtn = document.getElementById("flagBtn");
+const flagText = document.getElementById("flagText");
+const prevQBtn = document.getElementById("prevQBtn");
+const nextQBtn = document.getElementById("nextQBtn");
+
+const paletteGrid = document.getElementById("paletteGrid");
+const progressBar = document.getElementById("progressBar");
+const answeredCount = document.getElementById("answeredCount");
+const topicPillsContainer = document.getElementById("topicPillsContainer");
+
+const modeToggleBtn = document.getElementById("modeToggleBtn");
+const modeLabel = document.getElementById("modeLabel");
+const themeToggleBtn = document.getElementById("themeToggleBtn");
+const themeIcon = document.getElementById("themeIcon");
+
+const customDialogModal = document.getElementById("customDialogModal");
+
+function getQuestionData(index) {
+  let accumulated = 0;
+  for (let t = 0; t < dataset.length; t++) {
+    const topic = dataset[t];
+    if (index < accumulated + topic.questions.length) {
+      const qInTopic = index - accumulated;
+      return {
+        topic: topic,
+        question: topic.questions[qInTopic],
+        topicIndex: t
+      };
+    }
+    accumulated += topic.questions.length;
+  }
+  return null;
+}
+
+function showLandingCover() {
+  landingCoverSection.classList.remove("hidden");
+  examWorkspace.classList.add("hidden");
+  topicNavBar.classList.add("hidden");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function handleStartExam(e) {
+  if (e) e.preventDefault();
+  
+  studentProfile.name = document.getElementById("studentNameInput").value || "Siswa TKA";
+  studentProfile.className = document.getElementById("studentClassInput").value || "XII SMA";
+  studentProfile.nisn = document.getElementById("studentNisnInput").value || "-";
+  studentProfile.school = document.getElementById("studentSchoolInput").value || "SMAN 1 Ciracap Sukabumi";
+
+  landingCoverSection.classList.add("hidden");
+  examWorkspace.classList.remove("hidden");
+  topicNavBar.classList.remove("hidden");
+
+  loadQuestion(0);
+  if (!timerInterval) startTimer();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function startPracticeDirectly() {
+  isPracticeMode = true;
+  modeLabel.innerText = "Mode: Practice";
+  handleStartExam(null);
+}
+
+function renderTopicPills() {
+  topicPillsContainer.innerHTML = "";
+  dataset.forEach((t, i) => {
+    const startQ = i * 5 + 1;
+    const endQ = startQ + 4;
+    const pill = document.createElement("button");
+    const active = getQuestionData(currentQIndex).topicIndex === i;
+    
+    pill.className = `px-3 py-1.5 rounded-xl font-semibold text-xs whitespace-nowrap transition flex items-center gap-1.5 border ${
+      active
+        ? "bg-blue-600 text-white border-blue-500 shadow-sm"
+        : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700"
+    }`;
+    pill.innerHTML = `<span class="w-2 h-2 rounded-full ${active ? "bg-amber-300" : "bg-blue-400"}"></span> ${t.topicName} (${startQ}-${endQ})`;
+    pill.onclick = () => loadQuestion(i * 5);
+    topicPillsContainer.appendChild(pill);
+  });
+}
+
+function renderPalette() {
+  paletteGrid.innerHTML = "";
+  let answeredNum = 0;
+
+  for (let i = 0; i < 30; i++) {
+    const btn = document.createElement("button");
+    const isCurrent = i === currentQIndex;
+    const isAnswered = userAnswers[i] !== null;
+    const isFlagged = flaggedQuestions.has(i);
+
+    if (isAnswered) answeredNum++;
+
+    let bgClass = "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700";
+    if (isAnswered) bgClass = "bg-emerald-500 text-white border-emerald-600 font-bold";
+    if (isFlagged) bgClass = "bg-amber-500 text-white border-amber-600 font-bold";
+    if (isCurrent) bgClass = "ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-slate-900 bg-blue-600 text-white font-extrabold";
+
+    btn.className = `h-9 rounded-lg border text-xs font-mono transition flex items-center justify-center relative ${bgClass}`;
+    btn.innerText = i + 1;
+
+    if (isFlagged && !isCurrent) {
+      const dot = document.createElement("span");
+      dot.className = "absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full border border-white dark:border-slate-900";
+      btn.appendChild(dot);
+    }
+
+    btn.onclick = () => loadQuestion(i);
+    paletteGrid.appendChild(btn);
+  }
+
+  answeredCount.innerText = `${answeredNum} / 30 Answered`;
+  const pct = Math.round((answeredNum / 30) * 100);
+  progressBar.style.width = `${pct}%`;
+}
+
+function loadQuestion(index) {
+  currentQIndex = index;
+  const data = getQuestionData(index);
+  const topic = data.topic;
+  const q = data.question;
+
+  // Render Story Panel
+  storyTag.innerText = `Text ${data.topicIndex + 1} of 6`;
+  storyThemeBadge.innerText = topic.topicName;
+  storyQRange.innerText = `${data.topicIndex * 5 + 1} - ${data.topicIndex * 5 + 5}`;
+  storyTitle.innerText = topic.storyTitle;
+  storyBody.innerHTML = topic.storyParagraphs.map(p => `<p class="mb-3">${p}</p>`).join("");
+
+  // Render Question Panel
+  qNumberBadge.innerText = `Q${q.qNum}`;
+  skillBadge.innerText = q.skill;
+  qPrompt.innerText = q.prompt;
+
+  // Options Rendering
+  qOptions.innerHTML = "";
+  const letters = ["A", "B", "C", "D", "E"];
+  q.options.forEach((opt, optIdx) => {
+    const letter = letters[optIdx];
+    const isSelected = userAnswers[index] === letter;
+
+    const optBtn = document.createElement("button");
+    let borderStyle = "border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200";
+
+    if (isSelected) {
+      borderStyle = "border-blue-500 bg-blue-50 dark:bg-blue-950/40 text-blue-900 dark:text-blue-200 font-semibold ring-1 ring-blue-500";
+    }
+
+    if (isPracticeMode && isSelected) {
+      if (letter === q.correct) {
+        borderStyle = "border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200 font-semibold ring-1 ring-emerald-500";
+      } else {
+        borderStyle = "border-rose-500 bg-rose-50 dark:bg-rose-950/40 text-rose-900 dark:text-rose-200 font-semibold ring-1 ring-rose-500";
+      }
+    }
+
+    optBtn.className = `w-full text-left p-3.5 rounded-xl border text-xs sm:text-sm transition flex items-start gap-3 ${borderStyle}`;
+    optBtn.innerHTML = `
+      <span class="w-6 h-6 rounded-lg bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 flex items-center justify-center font-bold font-mono text-xs text-slate-600 dark:text-slate-200 shrink-0 ${isSelected ? 'bg-blue-600 border-blue-600 text-white' : ''}">
+        ${letter}
+      </span>
+      <span class="pt-0.5 leading-snug">${opt}</span>
+    `;
+
+    optBtn.onclick = () => selectOption(index, letter);
+    qOptions.appendChild(optBtn);
+  });
+
+  // Flag Button status
+  if (flaggedQuestions.has(index)) {
+    flagBtn.className = "px-2.5 py-1 text-xs rounded-lg bg-amber-500 text-white font-bold transition flex items-center gap-1";
+    flagText.innerText = "Flagged";
+  } else {
+    flagBtn.className = "px-2.5 py-1 text-xs rounded-lg border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-amber-500 transition flex items-center gap-1";
+    flagText.innerText = "Flag";
+  }
+
+  // Prev / Next button state
+  prevQBtn.disabled = index === 0;
+  nextQBtn.innerHTML = index === 29 ? `Review <i class="fa-solid fa-check-double"></i>` : `Next <i class="fa-solid fa-chevron-right"></i>`;
+
+  // Practice Mode Explanation Box
+  if (isPracticeMode && userAnswers[index] !== null) {
+    feedbackBox.classList.remove("hidden");
+    const isCorrect = userAnswers[index] === q.correct;
+    if (isCorrect) {
+      feedbackBox.className = "my-4 p-4 rounded-xl text-xs sm:text-sm bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200";
+      feedbackBox.innerHTML = `<strong><i class="fa-solid fa-circle-check text-emerald-500"></i> Correct Answer!</strong><br>${q.explanation}`;
+    } else {
+      feedbackBox.className = "my-4 p-4 rounded-xl text-xs sm:text-sm bg-rose-50 dark:bg-rose-950/40 border border-rose-300 dark:border-rose-800 text-rose-900 dark:text-rose-200";
+      feedbackBox.innerHTML = `<strong><i class="fa-solid fa-circle-xmark text-rose-500"></i> Incorrect. Correct option is (${q.correct})</strong><br>${q.explanation}`;
+    }
+  } else {
+    feedbackBox.classList.add("hidden");
+  }
+
+  renderTopicPills();
+  renderPalette();
+}
+
+function selectOption(qIdx, letter) {
+  userAnswers[qIdx] = letter;
+  loadQuestion(qIdx);
+}
+
+prevQBtn.onclick = () => { if (currentQIndex > 0) loadQuestion(currentQIndex - 1); };
+nextQBtn.onclick = () => {
+  if (currentQIndex < 29) {
+    loadQuestion(currentQIndex + 1);
+  } else {
+    triggerFinishConfirmation();
+  }
+};
+
+flagBtn.onclick = () => {
+  if (flaggedQuestions.has(currentQIndex)) {
+    flaggedQuestions.delete(currentQIndex);
+  } else {
+    flaggedQuestions.add(currentQIndex);
+  }
+  loadQuestion(currentQIndex);
+};
+
+modeToggleBtn.onclick = () => {
+  isPracticeMode = !isPracticeMode;
+  modeLabel.innerText = isPracticeMode ? "Mode: Practice" : "Mode: Exam";
+  loadQuestion(currentQIndex);
+};
+
+themeToggleBtn.onclick = () => {
+  isDarkMode = !isDarkMode;
+  if (isDarkMode) {
+    document.documentElement.classList.add("dark");
+    themeIcon.className = "fa-solid fa-sun text-amber-400";
+  } else {
+    document.documentElement.classList.remove("dark");
+    themeIcon.className = "fa-solid fa-moon text-slate-600";
+  }
+};
+
+document.getElementById("scrollToTopStory").onclick = () => {
+  storyBody.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    if (timerSeconds > 0) {
+      timerSeconds--;
+      const m = Math.floor(timerSeconds / 60).toString().padStart(2, '0');
+      const s = (timerSeconds % 60).toString().padStart(2, '0');
+      document.getElementById("timerDisplay").innerText = `${m}:${s}`;
+    } else {
+      clearInterval(timerInterval);
+      showCustomDialog(
+        '<i class="fa-solid fa-hourglass-end text-amber-500 text-2xl"></i>',
+        "Time Elapsed (90 Minutes)!",
+        "The allocated 90 minutes exam time has ended. Your answers will now be evaluated.",
+        [
+          {
+            text: "View Results",
+            class: "bg-blue-600 text-white font-bold py-2 px-4 rounded-xl text-xs",
+            onClick: () => {
+              hideCustomDialog();
+              calculateResults();
+            }
+          }
+        ]
+      );
+    }
+  }, 1000);
+}
+
+function showCustomDialog(iconHTML, title, message, actionButtons) {
+  document.getElementById("dialogIconContainer").innerHTML = iconHTML;
+  document.getElementById("dialogTitle").innerText = title;
+  document.getElementById("dialogMessage").innerText = message;
+  
+  const actionsContainer = document.getElementById("dialogActions");
+  actionsContainer.innerHTML = "";
+  
+  actionButtons.forEach(btnConfig => {
+    const btn = document.createElement("button");
+    btn.className = btnConfig.class;
+    btn.innerText = btnConfig.text;
+    btn.onclick = btnConfig.onClick;
+    actionsContainer.appendChild(btn);
+  });
+
+  customDialogModal.classList.remove("hidden");
+}
+
+function hideCustomDialog() {
+  customDialogModal.classList.add("hidden");
+}
+
+function triggerFinishConfirmation() {
+  const answered = userAnswers.filter(a => a !== null).length;
+  if (answered < 30) {
+    showCustomDialog(
+      '<i class="fa-solid fa-triangle-exclamation text-amber-500 text-2xl"></i>',
+      "Unanswered Questions Detected",
+      `You have completed ${answered} out of 30 items. Are you sure you want to finish and submit the test now?`,
+      [
+        {
+          text: "Continue Test",
+          class: "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold py-2 px-4 rounded-xl text-xs",
+          onClick: hideCustomDialog
+        },
+        {
+          text: "Finish & Submit",
+          class: "bg-blue-600 text-white font-bold py-2 px-4 rounded-xl text-xs",
+          onClick: () => {
+            hideCustomDialog();
+            calculateResults();
+          }
+        }
+      ]
+    );
+  } else {
+    showCustomDialog(
+      '<i class="fa-solid fa-circle-check text-emerald-500 text-2xl"></i>',
+      "Complete Exam Ready",
+      "All 30 HOTS items answered! Would you like to submit and generate your academic score report?",
+      [
+        {
+          text: "Review Items",
+          class: "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold py-2 px-4 rounded-xl text-xs",
+          onClick: hideCustomDialog
+        },
+        {
+          text: "Submit Exam",
+          class: "bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold py-2 px-5 rounded-xl text-xs",
+          onClick: () => {
+            hideCustomDialog();
+            calculateResults();
+          }
+        }
+      ]
+    );
+  }
+}
+
+document.getElementById("finishTestBtn").onclick = triggerFinishConfirmation;
+
+function calculateResults() {
+  let score = 0;
+  let reviewHTML = "";
+
+  for (let i = 0; i < 30; i++) {
+    const qData = getQuestionData(i);
+    const q = qData.question;
+    const userAns = userAnswers[i];
+    const isCorrect = userAns === q.correct;
+    if (isCorrect) score++;
+
+    reviewHTML += `
+      <div class="p-4 rounded-xl border ${isCorrect ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800' : 'bg-rose-50/50 dark:bg-rose-950/20 border-rose-300 dark:border-rose-800'} text-xs space-y-2">
+        <div class="flex items-center justify-between font-bold">
+          <span class="text-slate-800 dark:text-slate-200">
+            Q${i + 1}. (${qData.topic.topicName}) — ${q.prompt}
+          </span>
+          <span class="${isCorrect ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'} uppercase font-mono">
+            ${isCorrect ? '✓ Correct' : '✕ Incorrect'}
+          </span>
+        </div>
+        <div class="text-slate-600 dark:text-slate-400">
+          Your Answer: <strong>${userAns ? userAns : 'Unanswered'}</strong> | Key Answer: <strong class="text-emerald-600 dark:text-emerald-400">${q.correct}</strong>
+        </div>
+        <div class="p-2.5 rounded bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+          <strong>HOTS Pedagogical Rationale:</strong> ${q.explanation}
+        </div>
+      </div>
+    `;
+  }
+
+  const pct = Math.round((score / 30) * 100);
+  document.getElementById("finalScoreVal").innerText = `${score} / 30`;
+  document.getElementById("finalPercentage").innerText = `${pct}% Accuracy`;
+
+  // Inject metadata
+  document.getElementById("resStudentName").innerText = studentProfile.name;
+  document.getElementById("resStudentClass").innerText = studentProfile.className;
+  document.getElementById("resStudentSchool").innerText = studentProfile.school;
+
+  let grade = "C";
+  let gradeText = "Sufficient Literacy Level";
+  if (pct >= 85) { grade = "A"; gradeText = "Outstanding HOTS Analytical Proficiency!"; }
+  else if (pct >= 70) { grade = "B"; gradeText = "Good Critical Reading & Reasoning"; }
+  else if (pct < 50) { grade = "D"; gradeText = "Needs Remedial Netiquette Literacy"; }
+
+  document.getElementById("gradeBadge").innerText = `Grade: ${grade}`;
+  document.getElementById("gradeDesc").innerText = gradeText;
+
+  const elapsedSec = 5400 - timerSeconds;
+  const elapsedMin = Math.floor(elapsedSec / 60);
+  const elapsedS = elapsedSec % 60;
+  document.getElementById("timeTakenVal").innerText = `${elapsedMin}m ${elapsedS}s`;
+
+  document.getElementById("reviewContainer").innerHTML = reviewHTML;
+  document.getElementById("resultModal").classList.remove("hidden");
+}
+
+document.getElementById("closeModalBtn").onclick = () => {
+  document.getElementById("resultModal").classList.add("hidden");
+};
+
+document.getElementById("restartTestBtn").onclick = () => {
+  showCustomDialog(
+    '<i class="fa-solid fa-rotate-right text-blue-500 text-2xl"></i>',
+    "Reset & Retake Examination",
+    "All current answers and time progress will be reset. Do you wish to restart?",
+    [
+      {
+        text: "Cancel",
+        class: "bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold py-2 px-4 rounded-xl text-xs",
+        onClick: hideCustomDialog
+      },
+      {
+        text: "Reset Exam",
+        class: "bg-rose-600 text-white font-bold py-2 px-4 rounded-xl text-xs",
+        onClick: () => {
+          hideCustomDialog();
+          userAnswers = new Array(30).fill(null);
+          flaggedQuestions.clear();
+          timerSeconds = 5400;
+          document.getElementById("resultModal").classList.add("hidden");
+          loadQuestion(0);
+        }
+      }
+    ]
+  );
+};
+
+document.getElementById("printResultBtn").onclick = () => {
+  window.print();
+};
+
+window.onload = function () {
+  showLandingCover();
+};
+</script>
+</body>
+</html>
